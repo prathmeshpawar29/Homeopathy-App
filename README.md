@@ -2,15 +2,26 @@
 
 A new Flutter project.
 
-## Getting Started
+Helps a patient to search homeopathy doctors as per their needs
 
-This project is a starting point for a Flutter application.
+ - view complete profile of the doctor.
+ - book an appointment with the doctor.
+ - Live chat with the doctor.
+ - Helps Doctor to reach patient all over the world.
 
-A few resources to get you started if this is your first Flutter project:
+Features
+ - Common App for patient and doctor
+ - Doctor Searching
+ - Appointment Booking (cancelling & history also)
+ - Realtime Chatting
+ - Easy to use
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Technologies Used
+1. Flutter
+  - Dart language
+  - Frontend + Backend
+2 Firebase
+  - Authentication ------> for authentication of the user
+  - Database -----> for storing the data of patient and doctor
+  - Storage ------> for profile images
+  - Realtime Database -------> for real time Chatting
