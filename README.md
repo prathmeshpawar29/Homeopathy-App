@@ -22,7 +22,7 @@ Technologies Used
   - Dart language
   - Frontend + Backend
   
-2 Firebase
+ 2. Firebase
   - Authentication ------> for authentication of the user
   - Database -----> for storing the data of patient and doctor
   - Storage ------> for profile images
