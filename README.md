@@ -39,11 +39,11 @@ Helps a patient to search homeopathy doctors as per their needs
 ## Screenshots
 
   #### Login Page
-  ![login](https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg | height=400)
+  ![login](https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg | height=400px)
   #### Home Page
-  ![home](https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg | height=400)
+  ![home](https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg | height=400px)
   #### Prediction Page
-  ![prediction](https://user-images.githubusercontent.com/126691686/222506766-d014828e-3864-425d-a50a-9c4b8ca98226.png | height=400)
+  ![prediction](https://user-images.githubusercontent.com/126691686/222506766-d014828e-3864-425d-a50a-9c4b8ca98226.png | height=400px)
   #### Sidebar Page
-  ![sidebar](https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png | height=400)
+  ![sidebar](https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png | height=400px)
 
