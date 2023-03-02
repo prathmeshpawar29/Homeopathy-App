@@ -1,4 +1,4 @@
-# homeopathy
+# Microgenesis - Homeopathy Health App
 
 ### A new Flutter project.
 
@@ -39,11 +39,18 @@ Helps a patient to search homeopathy doctors as per their needs
 ## Screenshots
 
   #### Login Page
-  <img src="https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg" alt="Login" height="400px">
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg" alt="Login" height="500px">
+  </p>
   #### Home Page
-  <img src="https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg" alt="Home" height="400px">
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg" alt="Home" height="500px">
+  </p>
   #### Prediction Page
-  <img src="https://user-images.githubusercontent.com/126691686/222506766-d014828e-3864-425d-a50a-9c4b8ca98226.png" alt="Prediction" height="400px">
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/126691686/222506766-d014828e-3864-425d-a50a-9c4b8ca98226.png" alt="Prediction" height="500px">
+  </p>
   #### Sidebar Page
-  <img src="https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png" alt="Sidebar" height="400px">
-
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png" alt="Sidebar" height="500px">
+  </p>
