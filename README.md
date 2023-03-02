@@ -1,6 +1,6 @@
 # homeopathy
 
-A new Flutter project.
+### A new Flutter project.
 
 Helps a patient to search homeopathy doctors as per their needs
 
@@ -9,25 +9,39 @@ Helps a patient to search homeopathy doctors as per their needs
  - Live chat with the doctor.
  - Helps Doctor to reach patient all over the world.
 
-Features
+#### Features
  - Common App for patient and doctor
  - Doctor Searching
  - Appointment Booking (cancelling & history also)
  - Realtime Chatting
  - Easy to use
 
-Technologies Used
+#### Technologies Used
 
 1. Flutter
   - Dart language
   - Frontend + Backend
   
- 2. Firebase
+2. Firebase
   - Authentication ------> for authentication of the user
   - Database -----> for storing the data of patient and doctor
   - Storage ------> for profile images
   - Realtime Database -------> for real time Chatting
+
+3. Flask
+  - Machine Learning -----> for api requests to make predictions
+  - Prediction ------> for disease predictions based on trained models
+
+4. MongoDB
+  - 
   
-  Screenshots
-  ![image](https://user-images.githubusercontent.com/114803933/222444180-e9a0d890-9b46-464c-a762-0098c2d4108e.png)
+  ##Screenshots
+  #### Login Page
+  ![login](login.jpeg)
+  #### Home Page
+  ![home](home.jpeg)
+  #### Prediction Page
+  ![prediction](prediction.png)
+  #### Sidebar Page
+  ![sidebar](sidebar.png)
 
