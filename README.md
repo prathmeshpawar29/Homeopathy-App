@@ -27,3 +27,7 @@ Technologies Used
   - Database -----> for storing the data of patient and doctor
   - Storage ------> for profile images
   - Realtime Database -------> for real time Chatting
+  
+  Screenshots
+  ![image](https://user-images.githubusercontent.com/114803933/222444180-e9a0d890-9b46-464c-a762-0098c2d4108e.png)
+
