@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_testing/routes/cancerInput.dart';
-import 'package:flutter_app_testing/routes/diabetesInput.dart';
-import 'package:flutter_app_testing/routes/heartInput.dart';
-import 'package:flutter_app_testing/routes/kidneyInput.dart';
+import 'package:homeopathy/routes/cancerInput.dart';
+import 'package:homeopathy/routes/diabetesInput.dart';
+import 'package:homeopathy/routes/heartInput.dart';
+import 'package:homeopathy/routes/kidneyInput.dart';
 import '../../Navbar.dart';
 import '../../core/color.dart';
 import '../../data/category_model.dart';

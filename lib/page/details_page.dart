@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_testing/routes/cancerInput.dart';
+import 'package:homeopathy/routes/cancerInput.dart';
 import '../../core/color.dart';
 import '../../data/plant_model.dart';
 import '../../routes/kidneyInput.dart';

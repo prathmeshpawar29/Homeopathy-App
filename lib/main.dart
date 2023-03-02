@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'page/splash_page.dart';
+import 'page/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Gilroy',
       ),
-      home: const Center(),
+      home: const SplashPage(),
     );
   }
 }
