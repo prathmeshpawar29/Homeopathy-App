@@ -39,11 +39,11 @@ Helps a patient to search homeopathy doctors as per their needs
 ## Screenshots
 
   #### Login Page
-  ![login](login.jpeg)
+  ![login](https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg)
   #### Home Page
-  ![home](home.jpeg)
+  ![home](https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg)
   #### Prediction Page
-  ![prediction](prediction.png)
+  ![prediction](https://user-images.githubusercontent.com/126691686/222506766-d014828e-3864-425d-a50a-9c4b8ca98226.png)
   #### Sidebar Page
-  ![sidebar](sidebar.png)
+  ![sidebar](https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png)
 
