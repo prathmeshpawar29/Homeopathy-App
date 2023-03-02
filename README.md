@@ -20,7 +20,7 @@ Helps a patient to search homeopathy doctors as per their needs
 
 1. Flutter
   - Dart language
-  - Frontend + Backend
+  - Cross Platform
   
 2. Firebase
   - Authentication ------> for authentication of the user
@@ -32,10 +32,12 @@ Helps a patient to search homeopathy doctors as per their needs
   - Machine Learning -----> for api requests to make predictions
   - Prediction ------> for disease predictions based on trained models
 
-4. MongoDB
-  - 
-  
-  ##Screenshots
+4. Python
+  - ML Libraries ------> numpy, pandas, matplotlib, keras, tensorflow
+
+
+## Screenshots
+
   #### Login Page
   ![login](login.jpeg)
   #### Home Page
