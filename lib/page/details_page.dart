@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_testing/routes/cancerInput.dart';
-import '../core/color.dart';
-import '../data/plant_model.dart';
-import '../routes/kidneyInput.dart';
-import '../routes/heartInput.dart';
-import '../routes/diabetesInput.dart';
+import '../../core/color.dart';
+import '../../data/plant_model.dart';
+import '../../routes/kidneyInput.dart';
+import '../../routes/heartInput.dart';
+import '../../routes/diabetesInput.dart';
 
 class DetailsPage extends StatelessWidget {
   final Plants plant;

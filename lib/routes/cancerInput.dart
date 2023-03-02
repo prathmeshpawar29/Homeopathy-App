@@ -1,56 +1,39 @@
-// ignore: file_names
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
-import '../core/color.dart';
+import '../../core/color.dart';
+// import 'dart:async';
 
 // diabetesInput.dart: Defines a Stateful widget which takes numerical values of diabetes test and
 // get diabetes risk result. Sends the numerical data given by user through HTTP POST request to REST API Endpoint.
 
-class DiabetesInput extends StatefulWidget {
-  const DiabetesInput({super.key});
+class CancerInput extends StatefulWidget {
+  const CancerInput({super.key});
   @override
-  _DiabetesInputState createState() => _DiabetesInputState();
+  _CancerInputState createState() => _CancerInputState();
 }
 
-class _DiabetesInputState extends State<DiabetesInput> {
-  late double pregnancies, glucose, bloodPressure, skinThickness, insulin, age;
-  late double diabetesPedgreeFuncion, bmi;
+class _CancerInputState extends State<CancerInput> {
+  late double cm, rm, rs, tm, cps, sm, cs, sym;
   String url =
-      "http://127.0.0.1:5000/predict/diabetes"; // This is local ip of the network on which flask server is running
+      "http://127.0.0.1:5000/predict/cancer"; // This is local ip of the network on which flask server is running
   int show = -1;
   @override
   void initState() {
-    pregnancies = 0;
-    glucose = 121;
-    bloodPressure = 69;
-    skinThickness = 20;
-    insulin = 0;
-    bmi = 32.0;
-    age = 35;
-    diabetesPedgreeFuncion = 0.47;
+    sym = 0.158;
+    rm = 7.75;
+    cps = 0;
+    tm = 24.5;
+    sm = 0.052;
+    cs = 0.0046;
+    cm = 0;
+    rs = 0.3857;
   }
 
-  void getPredictions(
-      double pregnancies,
-      double glucose,
-      double bloodPressure,
-      double skinThickness,
-      double insulin,
-      double bmi,
-      double age,
-      double diabetesPedgreeFuncion) async {
-    List<double> parameters = [
-      pregnancies,
-      glucose,
-      bloodPressure,
-      skinThickness,
-      insulin,
-      bmi,
-      diabetesPedgreeFuncion,
-      age
-    ];
+  void getPredictions(double cm, double rm, double rs, double tm, double cps,
+      double sm, double cs, double sym) async {
+    List<double> parameters = [cm, rm, rs, tm, cps, sm, cs, sym];
     Map<String, dynamic> args = {"parameters": parameters};
     var body = jsonEncode(args);
     http.Response response = await http.post(Uri.parse(url),
@@ -71,7 +54,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Diabetes Prediction'),
+        title: const Text('Breast Cancer Prediction'),
         elevation: 0,
         backgroundColor: white,
         foregroundColor: black,
@@ -92,7 +75,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Pregnancies",
+                    labelText: "Mean of Symmetry",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -103,7 +86,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        pregnancies = double.parse(value);
+                        sym = double.parse(value);
                       });
                     }
                   },
@@ -113,7 +96,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Glucose",
+                    labelText: "Mean of Concavity",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -124,7 +107,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        glucose = double.parse(value);
+                        cm = double.parse(value);
                       });
                     }
                   },
@@ -134,7 +117,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Blood Pressure",
+                    labelText: "Radius of Lobes (Radius Mean)",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -145,7 +128,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        bloodPressure = double.parse(value);
+                        rm = double.parse(value);
                       });
                     }
                   },
@@ -155,7 +138,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Skin Thickness",
+                    labelText: "SE of Concave Points",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -166,7 +149,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        skinThickness = double.parse(value);
+                        cps = double.parse(value);
                       });
                     }
                   },
@@ -176,7 +159,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Insulin",
+                    labelText: "Mean of Surface Texture",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -187,7 +170,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        insulin = double.parse(value);
+                        tm = double.parse(value);
                       });
                     }
                   },
@@ -197,7 +180,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "BMI",
+                    labelText: "Mean of Smoothness Levels",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -208,7 +191,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        bmi = double.parse(value);
+                        sm = double.parse(value);
                       });
                     }
                   },
@@ -218,7 +201,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Diabetes Pedigree Function",
+                    labelText: "SE of Compactness",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -229,7 +212,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        diabetesPedgreeFuncion = double.parse(value);
+                        cs = double.parse(value);
                       });
                     }
                   },
@@ -239,7 +222,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Age",
+                    labelText: "SE of Radius",
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -250,7 +233,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   onChanged: (value) {
                     if (value != "") {
                       setState(() {
-                        age = double.parse(value);
+                        rs = double.parse(value);
                       });
                     }
                   },
@@ -259,12 +242,12 @@ class _DiabetesInputState extends State<DiabetesInput> {
               show == 1
                   ? const Card(
                       child: ListTile(
-                        subtitle: Text("High Risk",
+                        subtitle: Text("Malignant Tumor is Found",
                             style: TextStyle(
                                 fontSize: 22.5,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.red)),
-                        title: Text("Your Diabetes Risk",
+                        title: Text("Cancer Tumor type",
                             style: TextStyle(
                               fontSize: 17.5,
                               fontWeight: FontWeight.w500,
@@ -274,12 +257,12 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   : show == 0
                       ? const Card(
                           child: ListTile(
-                            subtitle: Text("Low Risk",
+                            subtitle: Text("Benign Tumor is Found",
                                 style: TextStyle(
                                     fontSize: 22.5,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.green)),
-                            title: Text("Your Diabetes Risk",
+                            title: Text("Cancer Tumor type",
                                 style: TextStyle(
                                   fontSize: 17.5,
                                   fontWeight: FontWeight.w500,
@@ -293,7 +276,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                                     fontSize: 22.5,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.grey)),
-                            title: Text("Your Diabetes Risk",
+                            title: Text("Cancer Tumour type",
                                 style: TextStyle(
                                   fontSize: 17.5,
                                   fontWeight: FontWeight.w500,
@@ -308,20 +291,16 @@ class _DiabetesInputState extends State<DiabetesInput> {
       floatingActionButton: FloatingActionButton.extended(
         icon: const FaIcon(FontAwesomeIcons.bookMedical),
         label: const Text("Get Results"),
-        backgroundColor: Colors.green,
         onPressed: () {
-          pregnancies = pregnancies;
-          glucose = glucose;
-          bloodPressure = bloodPressure;
-          skinThickness = skinThickness;
-          insulin = insulin;
-          bmi = bmi;
-          diabetesPedgreeFuncion = diabetesPedgreeFuncion;
-          age = age;
-          getPredictions(pregnancies, glucose, bloodPressure, skinThickness,
-              insulin, bmi, age, diabetesPedgreeFuncion);
-          // print(
-          //     "$pregnancies, $glucose, $bloodPressure, $skinThickness, $insulin, $bmi, $age, $diabetesPedgreeFuncion");
+          sym = sym;
+          rm = rm;
+          cm = cm;
+          rs = rs;
+          tm = tm;
+          sm = sm;
+          cs = cs;
+          cps = cps;
+          getPredictions(cm, rm, rs, tm, cps, sm, cs, sym);
         },
       ),
     );

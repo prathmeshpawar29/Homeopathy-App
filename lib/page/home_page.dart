@@ -3,10 +3,10 @@ import 'package:flutter_app_testing/routes/cancerInput.dart';
 import 'package:flutter_app_testing/routes/diabetesInput.dart';
 import 'package:flutter_app_testing/routes/heartInput.dart';
 import 'package:flutter_app_testing/routes/kidneyInput.dart';
-import '../Navbar.dart';
-import '../core/color.dart';
-import '../data/category_model.dart';
-import '../data/plant_data.dart';
+import '../../Navbar.dart';
+import '../../core/color.dart';
+import '../../data/category_model.dart';
+import '../../data/plant_data.dart';
 import '../page/details_page.dart';
 
 class HomePage extends StatefulWidget {
