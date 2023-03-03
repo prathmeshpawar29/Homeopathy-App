@@ -41,7 +41,7 @@ Helps a patient to search homeopathy doctors as per their needs
   
   <p align="center">
 
-  #### Login Page>
+  #### Login Page
   <img src="https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg" alt="Login" height="500px">
   </p>
   <hr>

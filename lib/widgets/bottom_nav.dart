@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homeopathy/routes/chat_screen.dart';
 import '../core/color.dart';
 import '../data/bottom_menu.dart';
 import '../page/home_page.dart';
@@ -56,6 +57,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
 List<Widget> child = [
   const HomePage(),
+  const ChatScreen(),
   Container(color: white),
   Container(color: white),
   Container(color: white),
