@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:homeopathy/page/doctor_list.dart';
 import 'package:http/http.dart' as http;
 import '../../core/color.dart';
 
@@ -300,7 +301,16 @@ class _DiabetesInputState extends State<DiabetesInput> {
                                 )),
                           ),
                         ),
-              const SizedBox(height: 100)
+              show == 1
+                  ? ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DoctorList()));
+                      },
+                      child: const Text('Consult Doctors'))
+                  : const SizedBox(height: 100),
             ],
           ),
         ),
