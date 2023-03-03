@@ -38,28 +38,35 @@ Helps a patient to search homeopathy doctors as per their needs
 
 ## Screenshots
 
-  #### Login Page>
   
   <p align="center">
+
+  #### Login Page>
   <img src="https://user-images.githubusercontent.com/126691686/222506752-511b647a-5647-4dae-abbe-fb15b7aeb113.jpeg" alt="Login" height="500px">
   </p>
+  <hr>
+
+  <p align="center">
 
   #### Sidebar Page
-  <p align="center">
   <img src="https://user-images.githubusercontent.com/126691686/222506781-fd1c0fdb-c96e-4ee0-9d45-969f8dffaf13.png" alt="Sidebar" height="500px">
   </p>
 
-  #### Home Page
+  <hr>
   <p align="center">
+
+  #### Home Page
   <img src="https://user-images.githubusercontent.com/126691686/222506740-c22f7545-853d-4afe-8735-abc8ac341f06.jpeg" alt="Home" height="500px">
   </p>
-  
-  #### Prediction Page
+  <hr>
   <p align="center">
+
+  #### Prediction Page
   <img src="https://user-images.githubusercontent.com/126691686/222673293-e8e9009f-eb92-4f75-bf4e-b39c3026317f.png" alt="Prediction" height="500px">
   </p>
+  <hr>
+  <p align="center">
 
   #### Doctor List Page
-  <p align="center">
   <img src="https://user-images.githubusercontent.com/126691686/222673490-c96a5c7b-af03-481c-8a3f-6be1e0bd178b.png" alt="Doctors" height="500px">
   </p>
