@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homeopathy/Screens/register/register.dart';
 import '../../core/color.dart';
 import '../../widgets/bottom_nav.dart';
 
@@ -66,7 +67,10 @@ class SplashPage extends StatelessWidget {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RegisterScreen()));
+            },
             child: Text(
               'Create an account',
               style: TextStyle(
