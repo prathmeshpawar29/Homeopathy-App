@@ -104,7 +104,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_dotenv:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_dotenv
       sha256: d9283d92059a22e9834bc0a31336658ffba77089fb6f3cc36751f1fc7c6661a3
@@ -130,7 +130,7 @@ packages:
     source: sdk
     version: "0.0.0"
   font_awesome_flutter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: font_awesome_flutter
       sha256: "959ef4add147753f990b4a7c6cccb746d5792dbdc81b1cde99e62e7edb31b206"
@@ -138,7 +138,7 @@ packages:
     source: hosted
     version: "10.4.0"
   http:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: http
       sha256: "6aa2946395183537c8b880962d935877325d6a09a2867c3970c05c0fed6ac482"
@@ -383,7 +383,7 @@ packages:
     source: hosted
     version: "2.1.4"
   velocity_x:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: velocity_x
       sha256: b70a9de038ac2265cba77c030487463a75c66d65da8d4d917dc6834293ff73a3

@@ -2,6 +2,7 @@
 import 'dart:io' show Platform, exit;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:homeopathy/page/symptoms_input.dart';
 import 'package:homeopathy/routes/cancerInput.dart';
 import 'package:homeopathy/routes/chat_screen.dart';
 import './routes/kidneyInput.dart';
@@ -75,6 +76,17 @@ class Navbar extends StatelessWidget {
             onTap: () => {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ChatScreen()))
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text('Symptoms Input'),
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SymptomsInput()))
             },
           ),
           const Divider(),
