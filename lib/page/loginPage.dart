@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:homeopathy/extras/user.dart';
+import 'package:homeopathy/page/home_page.dart';
 import 'package:homeopathy/page/registratiion.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:http/http.dart' as http;
-// import 'applogo.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -12,174 +12,103 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
+  String url = "http://localhost:8080/signin";
   @override
   Widget build(BuildContext context) {
+    User user = User('', '');
     Future save() async {
-      var res = await http.post("http://localhost:8080/signup" as Uri,
-          headers: <String, String>{
-            'Context-Type': 'application/json;charSet=UTF-8'
-          },
-          body: <String, String>{
-            'email': user.email,
-            'password': user.password
-          });
-      print(res.body);
-      Navigator.push(
-          context, new MaterialPageRoute(builder: (context) => Signin()));
+      try {
+        var res = await http.post(Uri.parse(url), headers: <String, String>{
+          'Context-Type': 'application/json;charSet=UTF-8'
+        }, body: <String, String>{
+          'email': user.email,
+          'password': user.password
+        });
+        if (res.statusCode == 200) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
+          print(res.body);
+        } else {
+          print(res.body);
+        }
+      } catch (e) {
+        print(e);
+      }
     }
 
-    User user = User('', '');
     return Scaffold(
-        body: Stack(
-      children: [
-        Positioned(
-            top: 0,
-            child: Image.asset(
-              'assets/images/01.png',
-              width: 400,
-              height: 150,
-            )),
-        Container(
-          alignment: Alignment.center,
-          child: Form(
-            key: _formKey,
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/register.jpeg"),
+              fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 150,
-                ),
-                const Text(
-                  "Signin",
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextFormField(
-                    controller: TextEditingController(text: user.email),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const HeightBox(10),
+                "Email Sign-In".text.size(25).bold.yellow100.make(),
+                TextField(
                     onChanged: (value) {
                       user.email = value;
                     },
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'Enter something';
-                      } else if (RegExp(
-                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value)) {
-                        return null;
-                      } else {
-                        return 'Enter valid email';
-                      }
-                    },
+                  keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                        icon: const Icon(
-                          Icons.email,
-                          color: Colors.blue,
-                        ),
-                        hintText: 'Enter Email',
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.blue)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.blue)),
-                        errorBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.red)),
-                        focusedErrorBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.red))),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextFormField(
-                    controller: TextEditingController(text: user.email),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Email",
+                      border: OutlineInputBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(10.0)))),
+                ).p4().px24(),
+                TextField(
                     onChanged: (value) {
-                      user.email = value;
+                    user.password = value;
                     },
-                    validator: (value) {
-                      if (value?.isEmpty) {
-                        return 'Enter something';
-                      }
-                      return null;
-                    },
-                    obscureText: true,
+                  keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                        icon: const Icon(
-                          Icons.vpn_key,
-                          color: Colors.blue,
-                        ),
-                        hintText: 'Enter Password',
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.blue)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.blue)),
-                        errorBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.red)),
-                        focusedErrorBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.red))),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Password",
+                      border: OutlineInputBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(10.0)))),
+                ).p4().px24(),
+                HStack([
+                  GestureDetector(
+                    onTap: () {
+                      save();
+                    },
+                    child: VxBox(child: "Login".text.white.makeCentered().p16())
+                        .green600
+                        .roundedLg
+                        .make()
+                        .px16()
+                        .py16(),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(55, 16, 16, 0),
-                  child: Container(
-                    height: 50,
-                    width: 400,
-                    child: TextButton(
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0)),
-                        onPressed: () {
-                          if (_formKey.currentState.validate()) {
-                            save();
-                          } else {
-                            print("not ok");
-                          }
-                        },
-                        child: const Text(
-                          "Signin",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        )),
-                  ),
-                ),
-                Padding(
-                    padding: const EdgeInsets.fromLTRB(95, 20, 0, 0),
-                    child: Row(
-                      children: [
-                        const Text(
-                          "Not have Account ? ",
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                new MaterialPageRoute(
-                                    builder: (context) => Signup()));
-                          },
-                          child: const Text(
-                            "Signup",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ))
+                ]),
+                GestureDetector(
+                  onTap: () {
+                    print("Sign In");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Registration()));
+                  },
+                  child: HStack([
+                    "Create a new account?".text.yellow50.bold.size(22).make(),
+                    " Sign Up".text.yellow200.bold.size(22).make()
+                  ]).centered(),
+                )
               ],
             ),
           ),
-        )
-      ],
-    ));
+        ),
+      ),
+    );
   }
 }

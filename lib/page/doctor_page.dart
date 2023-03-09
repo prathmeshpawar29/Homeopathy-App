@@ -67,8 +67,8 @@ class CookieDetail extends StatelessWidget {
         Center(
           child: Container(
             width: MediaQuery.of(context).size.width - 50.0,
-            child: const Text(
-                'Cold, creamy ice cream sandwiched between delicious deluxe cookies. Pick your favorite deluxe cookies and ice cream flavor.',
+            child: Text(
+                "${doctor.name} a Homeopath, ${doctor.speciality} specialist having multispeciality clinics in Mira Road, Kandivali and Andheri in Mumbai and has an experience of 16 years in these fields. Dr. Rupesh Singh practices at Dr. Singh's Advanced Homeopathy Clinic in Mira Road, Mumbai, Dr. Singh's Advanced Homeopathy Clinic (Kandivali) in Kandivali East, Mumbai and Dr. Singh's Advanced Homeopathy Clinic in Andheri West, Mumbai. He completed BHMS from MUHS in 2000.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',

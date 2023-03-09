@@ -39,7 +39,7 @@ class ChatMessage extends StatelessWidget {
                             : const CircularProgressIndicator.adaptive(),
                   ),
                 )
-              : text.trim().text.bodyText1(context).make().px8(),
+              : text.trim().text.bodyText1(context).size(20).make().px8(),
         ),
       ],
     ).py8();

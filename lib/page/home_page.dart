@@ -3,6 +3,7 @@ import 'package:homeopathy/routes/cancerInput.dart';
 import 'package:homeopathy/routes/diabetesInput.dart';
 import 'package:homeopathy/routes/heartInput.dart';
 import 'package:homeopathy/routes/kidneyInput.dart';
+import 'package:homeopathy/widgets/bottom_nav.dart';
 import '../../Navbar.dart';
 import '../../core/color.dart';
 import '../../data/category_model.dart';
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: white,
       drawer: const Navbar(),
       appBar: AppBar(
-        title: const Text('Homeopathy App'),
+        title: const Text('Swasthyam'),
         elevation: 0,
         backgroundColor: white,
         foregroundColor: black,

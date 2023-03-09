@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:homeopathy/page/loginPage.dart';
+import 'package:homeopathy/page/registratiion.dart';
 import '../../core/color.dart';
 import '../../widgets/bottom_nav.dart';
 
@@ -44,7 +46,7 @@ class SplashPage extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (builder) => const BottomNavBar()));
+                      builder: (builder) => SignInPage()));
             },
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -66,7 +68,10 @@ class SplashPage extends StatelessWidget {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (builder) => Registration()));
+            },
             child: Text(
               'Create an account',
               style: TextStyle(

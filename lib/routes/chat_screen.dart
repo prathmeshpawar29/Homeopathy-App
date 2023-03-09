@@ -23,7 +23,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     chatGPT = OpenAI.instance.build(
-        token: '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',
+        token: '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',
         baseOption: HttpSetup(receiveTimeout: 60000));
     super.initState();
   }
@@ -116,7 +116,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("ChatGPT & Dall-E2 Demo")),
+        appBar: AppBar(title: const Text("Swasthyam Health")),
         body: SafeArea(
           child: Column(
             children: [

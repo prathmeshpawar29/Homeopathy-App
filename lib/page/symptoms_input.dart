@@ -42,12 +42,7 @@ class _SymptomsInputState extends State<SymptomsInput> {
     }
     symptomTile.add(TextButton(
       onPressed: () {
-        // Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //         builder: (context) => PredictDisease(
-        //               symptoms: symptomStrings,
-        //             )));
+        
       },
       child: Container(
         width: 230,
@@ -59,13 +54,16 @@ class _SymptomsInputState extends State<SymptomsInput> {
         ),
         child: const Padding(
           padding: EdgeInsets.all(8.0),
+          child: InkWell(
           child: Text(
             "Get Medicines",
+            
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 22.5,
                 fontWeight: FontWeight.w500),
             textAlign: TextAlign.center,
+          ),
           ),
         ),
       ),

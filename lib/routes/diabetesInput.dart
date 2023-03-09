@@ -270,6 +270,7 @@ class _DiabetesInputState extends State<DiabetesInput> {
                               fontSize: 17.5,
                               fontWeight: FontWeight.w500,
                             )),
+                        
                       ),
                     )
                   : show == 0

@@ -60,5 +60,4 @@ List<Widget> child = [
   const ChatScreen(),
   Container(color: white),
   Container(color: white),
-  Container(color: white),
 ];
